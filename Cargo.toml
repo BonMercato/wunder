@@ -1,0 +1,22 @@
+[package]
+name = "wunder"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+chrono = "0.4.23"
+clap = { version = "4.0.26", features = ["derive"] }
+config = "0.13.2"
+miette = { version = "5.4.1", features = ["fancy"] }
+# quick-xml with new serializer
+quick-xml = { git = "https://github.com/tafia/quick-xml", rev = "78a1cf5", features = ["serialize"] }
+reqwest = { version = "0.11.13", features = ["json"] }
+serde = { version = "1.0.147", features = ["derive"] }
+serde_with = "2.1.0"
+serde_with_macros = "2.1.0"
+thiserror = "1.0.37"
+tokio = { version = "1.21.2", features = ["full"] }
+tracing = "0.1.37"
+tracing-subscriber = { version = "0.3.16", features = ["env-filter"] }
